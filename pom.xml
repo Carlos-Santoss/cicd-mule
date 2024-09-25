@@ -4,11 +4,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
+	<groupId>b5471ed3-75b9-4a35-9fb7-ee90d3e14dd6</groupId>
 	<artifactId>ci-cd-mulesoft</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
-
 	<name>ci-cd-mulesoft</name>
 
 	<properties>
@@ -38,10 +37,8 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.7.3</muleVersion>
-						<server>${nome_do_servidor}</server>
-						<applicationName>
-							mule-ci-cd
-						</applicationName>
+						<server>Repository</server>
+						<applicationName>ci-cd-mulesoft</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<properties>
@@ -61,8 +58,7 @@
 			<id>Repository</id>
 			<name>Corporate Repository</name>
 			<url>
-https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/ma
-ven
+https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven
 </url>
 			<layout>default</layout>
 		</repository>
